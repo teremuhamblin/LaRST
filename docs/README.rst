@@ -12,7 +12,7 @@ Contenu
 - architecture.md : structure technique du projet
 - data-model.md : schéma des données v1.0.0
 - governance.md : principes, rôles et organisation
-- README.md : vue d’ensemble de la documentation
+- README.rst : vue d’ensemble de la documentation
 
 Version
 -------
