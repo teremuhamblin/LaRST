@@ -1,0 +1,7 @@
+# Code owners pour La RST
+# Les personnes ci-dessous approuvent les PR avant fusion.
+
+*       @teremuhamblin
+backend/ @teremuhamblin
+frontend/ @teremuhamblin
+docs/     @teremuhamblin
