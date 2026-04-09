@@ -17,17 +17,29 @@ Voici l’organisation optimale pour un frontend moderne :
 
 `
 frontend/
-│── README.md
-│── docs/
-│   ├── architecture.md
-│   ├── ui-ux-guidelines.md
-│   ├── api-usage.md
-│   ├── components-guidelines.md
-│   ├── state-management.md
-│   ├── testing.md
-│   ├── environment.md
-│   ├── contributing-frontend.md
-│   └── roadmap.md
+│── index.html
+│── package.json
+│── vite.config.js
+│── .gitignore
+│── .env.example
+│
+└── src/
+    ├── main.jsx
+    ├── App.jsx
+    ├── api/
+    │   └── apiClient.js
+    ├── pages/
+    │   ├── Home.jsx
+    │   ├── Volunteers.jsx
+    │   ├── Beneficiaries.jsx
+    │   └── Missions.jsx
+    ├── components/
+    │   ├── Layout.jsx
+    │   └── NavBar.jsx
+    ├── styles/
+    │   └── main.css
+    └── router/
+        └── Router.jsx
 `
 
 ---
