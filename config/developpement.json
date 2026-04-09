@@ -1,0 +1,19 @@
+{
+  "app": {
+    "environment": "development",
+    "logLevel": "debug"
+  },
+
+  "security": {
+    "cors": {
+      "enabled": true,
+      "origin": "http://localhost:8080"
+    }
+  },
+
+  "api": {
+    "rateLimit": {
+      "enabled": false
+    }
+  }
+}
