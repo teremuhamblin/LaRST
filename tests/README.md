@@ -6,7 +6,7 @@ tests/README.rst
 
 `rst
 Tests — La RST
-==============
+==============`
 
 Ce dossier contient l’ensemble des tests automatisés du projet La RST.
 Ils permettent de garantir la stabilité, la qualité et la cohérence du code.
