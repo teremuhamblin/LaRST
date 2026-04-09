@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: larst_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ../../backend
+    container_name: larst_backend
+    restart: always
+    env_file:
+      - ../../config/.env
+    environment:
+      NODE_ENV: production
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
