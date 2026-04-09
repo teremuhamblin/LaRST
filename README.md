@@ -173,7 +173,7 @@ la-rst/
 - [x] API CRUD  
 - [x] Pages HTML simples  
 - [x] Documentation initiale  
-- [ ] Auth admin simple  
+- [x] Auth admin simple  
 
 ---
 
