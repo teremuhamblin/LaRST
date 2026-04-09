@@ -1,0 +1,39 @@
+{
+  "app": {
+    "name": "La RST",
+    "version": "1.0.0",
+    "environment": "development",
+    "port": 3000,
+    "logLevel": "info"
+  },
+
+  "auth": {
+    "adminToken": "${ADMIN_TOKEN}"
+  },
+
+  "database": {
+    "client": "postgres",
+    "host": "${DB_HOST}",
+    "port": "${DB_PORT}",
+    "user": "${DB_USER}",
+    "password": "${DB_PASSWORD}",
+    "database": "${DB_NAME}",
+    "ssl": false
+  },
+
+  "security": {
+    "cors": {
+      "enabled": true,
+      "origin": "${CORS_ORIGIN}"
+    }
+  },
+
+  "api": {
+    "prefix": "/api",
+    "rateLimit": {
+      "enabled": false,
+      "windowMs": 60000,
+      "max": 100
+    }
+  }
+}
