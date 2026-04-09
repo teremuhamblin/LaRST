@@ -1,17 +1,19 @@
 
-`markdown
+README.md >> markdown
 
-La RST — Plateforme de gestion des bénévoles et bénéficiaires
-Version 1.0.0 — Initialisation du projet
+# LaRST
+- Plateforme de gestion des bénévoles et bénéficiaires
+- Version 1.0.0
+- Initialisation du projet
 
-La RST est une plateforme web open‑source destinée aux structures solidaires, et notamment à La Roulotte Solidaire Toulouse.  
+> La RST est une plateforme `web open‑source` destinée aux structures solidaires, et notamment à ```La Roulotte Solidaire Toulouse```. 
 Elle permet de gérer efficacement les bénévoles, les bénéficiaires et les missions, avec une approche simple, éthique et accessible.
 
 ---
 
-🎯 Objectifs du projet
+### 🎯 Objectifs du projet
 
-La version 1.0.0 constitue un MVP fonctionnel, utilisable en conditions réelles pour :
+> La version 1.0.0 constitue un MVP fonctionnel, utilisable en conditions réelles pour :
 
 👥 Gestion des bénévoles
 - Création, modification et archivage  
@@ -33,22 +35,22 @@ Cette version pose les fondations d’une plateforme solide, extensible et adapt
 
 ---
 
-🧱 Architecture du projet
+### 🧱 Architecture du projet
 
 Le projet est organisé en trois blocs principaux :
 
-Backend (API REST)
+> Backend (API REST)
 - Node.js + Express  
 - PostgreSQL  
 - Architecture modulaire par domaines (volunteers, beneficiaries, missions)  
 - Endpoints CRUD simples et robustes  
 
-Frontend (Web minimaliste)
+> Frontend (Web minimaliste)
 - HTML / CSS / JavaScript léger  
 - Pages dédiées : bénévoles, bénéficiaires, missions  
 - Consommation directe de l’API REST  
 
-Documentation
+> Documentation
 - Architecture  
 - Modèle de données  
 - Gouvernance  
@@ -56,7 +58,7 @@ Documentation
 
 ---
 
-🗂️ Arborescence du projet
+### 🗂️ Arborescence du projet
 
 ```text
 la-rst/
@@ -102,9 +104,9 @@ la-rst/
 
 ---
 
-🗃️ Modèle de données (v1.0.0)
+### 🗃️ Modèle de données (v1.0.0)
 
-Bénévoles (volunteers)
+> Bénévoles (volunteers)
 - id (UUID)  
 - firstname, lastname  
 - email, phone  
@@ -113,7 +115,7 @@ Bénévoles (volunteers)
 - status (active / archived)  
 - timestamps  
 
-Bénéficiaires (beneficiaries)
+> Bénéficiaires (beneficiaries)
 - id (UUID)  
 - firstname, lastname  
 - contact  
@@ -123,7 +125,7 @@ Bénéficiaires (beneficiaries)
 - status  
 - timestamps  
 
-Missions (missions)
+> Missions (missions)
 - id (UUID)  
 - title, description  
 - location  
@@ -131,29 +133,29 @@ Missions (missions)
 - status (planned / done / cancelled)  
 - timestamps  
 
-Relations
+>Relations
 - mission_volunteers (N:N)  
 - mission_beneficiaries (N:N)  
 
 ---
 
-🧩 Endpoints API (v1.0.0)
+### 🧩 Endpoints API (v1.0.0)
 
-Volunteers
+> Volunteers
 - GET /api/volunteers  
 - POST /api/volunteers  
 - GET /api/volunteers/:id  
 - PUT /api/volunteers/:id  
 - DELETE /api/volunteers/:id  
 
-Beneficiaries
+> Beneficiaries
 - GET /api/beneficiaries  
 - POST /api/beneficiaries  
 - GET /api/beneficiaries/:id  
 - PUT /api/beneficiaries/:id  
 - DELETE /api/beneficiaries/:id  
 
-Missions
+> Missions
 - GET /api/missions  
 - POST /api/missions  
 - GET /api/missions/:id  
@@ -164,9 +166,9 @@ Missions
 
 ---
 
-🧭 Roadmap 1.0.0 → 1.1.0
+### 🧭 Roadmap 1.0.0 → 1.1.0
 
-1.0.0 — MVP (actuel)
+> 1.0.0 — MVP (actuel)
 - [x] Modèle de données  
 - [x] API CRUD  
 - [x] Pages HTML simples  
@@ -175,38 +177,38 @@ Missions
 
 ---
 
-1.1.0 — Confort d’usage & gouvernance
+> 1.1.0 — Confort d’usage & gouvernance
 
-Fonctionnel
+Fonctionnel :
 - [ ] Système de rôles (admin / coordinateur / bénévole)  
 - [ ] Recherche et filtres  
 - [ ] Historique des missions par personne  
 - [ ] Statuts avancés des missions  
 
-Technique
+Technique :
 - [ ] Dockerisation  
 - [ ] Tests backend  
 - [ ] Composants frontend réutilisables  
 
-Documentation
+Documentation :
 - [ ] Gouvernance (rôles, processus)  
 - [ ] Politique de données (RGPD)  
 - [ ] Guide d’installation pour associations  
 
 ---
 
-📜 Licence
+### 📜 Licence
 Projet distribué sous licence MIT, ouvert, libre et réutilisable.
 
 ---
 
-🤝 Contribution
+### 🤝 Contribution
 La RST est pensée comme un projet communautaire.  
 Les contributions sont les bienvenues : documentation, code, retours terrain, idées.
 
 ---
 
-🏁 État du projet
+### 🏁 État du projet
 Version actuelle : 1.0.0 — MVP fonctionnel  
 La 1.1.0 se concentrera sur l’expérience utilisateur, la gouvernance et la robustesse.
 
