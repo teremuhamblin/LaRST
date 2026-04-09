@@ -1,0 +1,21 @@
+{
+  "app": {
+    "environment": "production",
+    "logLevel": "info"
+  },
+
+  "security": {
+    "cors": {
+      "enabled": true,
+      "origin": "${CORS_ORIGIN}"
+    }
+  },
+
+  "api": {
+    "rateLimit": {
+      "enabled": true,
+      "windowMs": 60000,
+      "max": 60
+    }
+  }
+}
