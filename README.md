@@ -180,20 +180,20 @@ la-rst/
 > 1.1.0 — Confort d’usage & gouvernance
 
 Fonctionnel :
-- [ ] Système de rôles (admin / coordinateur / bénévole)  
-- [ ] Recherche et filtres  
-- [ ] Historique des missions par personne  
-- [ ] Statuts avancés des missions  
+- [x] Système de rôles (admin / coordinateur / bénévole)  
+- [x] Recherche et filtres  
+- [x] Historique des missions par personne  
+- [x] Statuts avancés des missions  
 
 Technique :
-- [ ] Dockerisation  
-- [ ] Tests backend  
-- [ ] Composants frontend réutilisables  
+- [x] Dockerisation  
+- [x] Tests backend  
+- [x] Composants frontend réutilisables  
 
 Documentation :
-- [ ] Gouvernance (rôles, processus)  
-- [ ] Politique de données (RGPD)  
-- [ ] Guide d’installation pour associations  
+- [x] Gouvernance (rôles, processus)  
+- [x] Politique de données (RGPD)  
+- [x] Guide d’installation pour associations  
 
 ---
 
