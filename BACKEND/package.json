@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "pg": "^8.12.0"
+  },
+  "scripts": {
+    "test": "cross-env NODE_ENV=test jest --runInBand",
+    "test:watch": "cross-env NODE_ENV=test jest --watch",
+    "test:coverage": "cross-env NODE_ENV=test jest --coverage"
+  }
+}
