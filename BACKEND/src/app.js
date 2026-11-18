@@ -13,6 +13,11 @@ import volunteersRouter from "./routes/volunteers.js";
 import beneficiariesRouter from "./routes/beneficiaries.js";
 import missionsRouter from "./routes/missions.js";
 
+const authRoutes = require('./modules/auth/auth.routes');
+
+// ...
+app.use('/api/auth', authRoutes);
+
 const app = express();
 
 // ------------------------------------------------------------
