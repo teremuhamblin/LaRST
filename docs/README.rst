@@ -1,6 +1,11 @@
 La RST — Documentation
 ======================
 
+- [Architecture](./architecture.md)
+- [Modèle de données](./data-model.md)
+- [Gouvernance](./governance.md)
+- [Politique de données (RGPD)](./privacy-policy.md)
+
 Ce dossier contient la documentation officielle du projet La RST.
 
 Il regroupe les informations essentielles sur l’architecture, le modèle de données,
