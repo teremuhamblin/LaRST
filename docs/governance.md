@@ -1,47 +1,42 @@
-# Gouvernance — La RST
+# Gouvernance du projet — La RST
 
-La RST est un projet open‑source solidaire.  
-Sa gouvernance repose sur des principes de transparence, d’inclusion et de responsabilité.
-
----
-
-## 1. Principes
-
-- **Transparence** : décisions documentées, code ouvert.
-- **Simplicité** : outils accessibles à toutes les associations.
-- **Éthique** : respect des personnes, des données et des usages.
-- **Neutralité** : pas d’usage commercial ou politique.
+## 1. Principes directeurs
+**La RST** est un projet open-source à vocation sociale. Les choix techniques et fonctionnels privilégient :
+1. **La simplicité d’usage** sur le terrain et en coordination ;
+2. **La sobriété technique** (peu de dépendances, hébergement associatif peu coûteux) ;
+3. **L’éthique et la protection des personnes vulnérables**.
 
 ---
 
-## 2. Rôles (v1.0.0)
+## 2. Rôles au sein de la plateforme (Usage associatif)
 
-### Mainteneur principal
-- Supervise le projet
-- Valide les orientations techniques
-- Gère les versions
+### `admin` (Administrateur / Bureau)
+- Crée et désactive les comptes utilisateurs (`users`).
+- Gère l’ensemble des bénévoles, bénéficiaires et missions.
+- Supervise les archives, les purges RGPD et la configuration de l’instance.
 
-### Contributeurs
-- Proposent des améliorations
-- Corrigent des bugs
-- Améliorent la documentation
+### `coordinator` (Coordinateur / Référent maraude)
+- Crée et planifie les missions (`draft`, `planned`, `in_progress`, `done`, `cancelled`).
+- Assigne les bénévoles et associe les bénéficiaires.
+- Consulte et met à jour les fiches complètes des bénéficiaires (y compris `notes` et `contact`).
 
-### Utilisateurs (associations)
-- Utilisent la plateforme
-- Remontent les besoins terrain
-
----
-
-## 3. Processus de décision
-
-- Les décisions techniques majeures sont discutées dans `docs/architecture.md`.
-- Les évolutions fonctionnelles suivent la roadmap.
-- Les contributions passent par des pull requests.
+### `volunteer` (Bénévole de terrain)
+- Consulte ses missions assignées et l’historique de ses propres missions.
+- Accède à la **feuille de route terrain** (`GET /api/missions/:id/roadmap`).
+- Peut mettre à jour le statut de présence/passage d’un bénéficiaire (`expected` / `met` / `absent`) lors d’une mission.
+- N’a pas accès aux `notes` internes sensibles ni aux fiches hors de ses missions.
 
 ---
 
-## 4. Cycle de version
+## 3. Gouvernance du dépôt open-source
 
-- **1.0.x** : corrections et stabilité
-- **1.1.x** : nouvelles fonctionnalités
-- **1.2.x** : modernisation frontend / UX
+### Rôles communautaires
+- **Mainteneurs** : valident les Pull Requests, gèrent les versions (`semver`) et veillent à la cohérence architecturale et RGPD.
+- **Contributeurs** : proposent du code, des corrections, de la documentation ou des tests.
+- **Référents terrain** *(bénévoles d’associations utilisatrices)* : remontent les besoins réels et testent les parcours avant chaque release.
+
+### Processus de contribution
+1. Ouvrir une *Issue* décrivant le besoin ou le bug (avec le contexte terrain si possible).
+2. Créer une branche dédiée depuis `main` (`feat/...`, `fix/...`, `docs/...`).
+3. Soumettre une *Pull Request* claire, accompagnée des tests et de la documentation associée.
+4. Validation requise par au moins un mainteneur avant fusion.
